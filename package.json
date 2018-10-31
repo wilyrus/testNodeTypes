@@ -1,0 +1,31 @@
+{
+  "name": "corenode",
+  "version": "0.0.1",
+  "description": "testing node",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node ./server/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wilerus/testNodeTypes.git"
+  },
+  "keywords": [
+    "node",
+    "typescript"
+  ],
+  "author": "wilyrus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wilerus/testNodeTypes/issues"
+  },
+  "homepage": "https://github.com/wilerus/testNodeTypes#readme",
+  "devDependencies": {
+    "@types/express": "^4.16.0",
+    "@types/redis": "^2.8.7",
+    "express": "^4.16.4",
+    "redis": "^2.8.0",
+    "typescript": "^3.1.4"
+  }
+}
