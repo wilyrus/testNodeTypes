@@ -4,8 +4,9 @@
   "description": "testing node",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "start": "node ./server/index.ts"
+    "start": "npm run build:live",
+    "build": "tsc -p .",
+    "build:live": "nodemon --watch 'src/**/*.ts' --exec ts-node src/index.ts"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,18 @@
   "homepage": "https://github.com/wilerus/testNodeTypes#readme",
   "devDependencies": {
     "@types/express": "^4.16.0",
+    "@types/node": "^10.12.1",
     "@types/redis": "^2.8.7",
     "express": "^4.16.4",
+    "nodemon": "^1.18.5",
     "redis": "^2.8.0",
-    "typescript": "^3.1.4"
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.4",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+    "corevue": "0.0.2"
   }
 }
