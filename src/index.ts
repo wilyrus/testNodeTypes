@@ -1,14 +1,18 @@
 import express from 'express';
-//import * as RootView from '../node_modules/corevue/dist/index.html';
+import bodyParser from 'body-parser';
+
+type ActicleData = {
+  id: number;
+  title: string;
+  content: string;
+};
 
 const app = express();
-const articles = [{ title: 'Example' }];
 
 app.set('port', process.env.PORT || 3000);
 
-app.get('/', (req, res) => {
-  res.send('RootView');
-});
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(app.get('port'), () => {
   console.log('App on', app.get('port'));
